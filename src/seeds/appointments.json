@@ -1,0 +1,42 @@
+[
+  {
+    "slotDate": "2026-04-22",
+    "slotTime": "10:00 AM",
+    "amount": 50,
+    "doctorIndex": 0,
+    "userIndex": 0,
+    "cancelled": false,
+    "payment": true,
+    "isComplete": false
+  },
+  {
+    "slotDate": "2026-04-23",
+    "slotTime": "2:00 PM",
+    "amount": 60,
+    "doctorIndex": 1,
+    "userIndex": 1,
+    "cancelled": false,
+    "payment": true,
+    "isComplete": false
+  },
+  {
+    "slotDate": "2026-04-24",
+    "slotTime": "11:00 AM",
+    "amount": 70,
+    "doctorIndex": 2,
+    "userIndex": 2,
+    "cancelled": false,
+    "payment": false,
+    "isComplete": false
+  },
+  {
+    "slotDate": "2026-04-25",
+    "slotTime": "3:30 PM",
+    "amount": 40,
+    "doctorIndex": 3,
+    "userIndex": 3,
+    "cancelled": false,
+    "payment": true,
+    "isComplete": false
+  }
+]

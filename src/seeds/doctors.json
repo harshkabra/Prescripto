@@ -1,0 +1,82 @@
+[
+  {
+    "fullName": "dr. richard james",
+    "email": "drjames@gmail.com",
+    "password": "Doctor@123",
+    "speciality": "general physician",
+    "degree": "MBBS",
+    "experience": "4 Years",
+    "about": "Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine and overall wellness strategies. With a keen eye for detail.",
+    "fees": 50,
+    "address": {
+      "line1": "17th Cross, Richmond",
+      "line2": "Richmond, London"
+    },
+    "availability": "Available",
+    "profile_image": "https://res.cloudinary.com/ddz3q4jti/image/upload/v1735043929/doctor_profile_1_ypjprq.png"
+  },
+  {
+    "fullName": "dr. emily larson",
+    "email": "drlarson@gmail.com",
+    "password": "Doctor@123",
+    "speciality": "gynecologist",
+    "degree": "MBBS",
+    "experience": "3 Years",
+    "about": "Dr. Larson specializes in women's health with a compassionate approach to patient care. She is dedicated to providing the highest quality healthcare to her patients.",
+    "fees": 60,
+    "address": {
+      "line1": "27th Avenue, New York",
+      "line2": "New York, USA"
+    },
+    "availability": "Available",
+    "profile_image": "https://res.cloudinary.com/ddz3q4jti/image/upload/v1735043929/doctor_profile_2_jgx6zu.png"
+  },
+  {
+    "fullName": "dr. sarah patel",
+    "email": "drpatel@gmail.com",
+    "password": "Doctor@123",
+    "speciality": "dermatologist",
+    "degree": "MBBS, MD",
+    "experience": "5 Years",
+    "about": "Dr. Patel is an experienced dermatologist with expertise in treating various skin conditions. She believes in personalized and holistic approach to skincare.",
+    "fees": 70,
+    "address": {
+      "line1": "42nd Street, Los Angeles",
+      "line2": "Los Angeles, USA"
+    },
+    "availability": "Available",
+    "profile_image": "https://res.cloudinary.com/ddz3q4jti/image/upload/v1735043929/doctor_profile_3_uetx5d.png"
+  },
+  {
+    "fullName": "dr. christopher lee",
+    "email": "drlee@gmail.com",
+    "password": "Doctor@123",
+    "speciality": "pediatricians",
+    "degree": "MBBS",
+    "experience": "2 Years",
+    "about": "Dr. Lee is a dedicated pediatrician with a passion for providing excellent care to children. His approach is friendly and patient-focused.",
+    "fees": 40,
+    "address": {
+      "line1": "52nd Boulevard, Chicago",
+      "line2": "Chicago, USA"
+    },
+    "availability": "Available",
+    "profile_image": "https://res.cloudinary.com/ddz3q4jti/image/upload/v1735043929/doctor_profile_4_w2d9m0.png"
+  },
+  {
+    "fullName": "dr. anthony lopez",
+    "email": "drlopez@gmail.com",
+    "password": "Doctor@123",
+    "speciality": "neurologist",
+    "degree": "MBBS, MD",
+    "experience": "6 Years",
+    "about": "Dr. Lopez specializes in neurology with extensive experience in treating neurological disorders. He is committed to improving patient outcomes through advanced medical practices.",
+    "fees": 80,
+    "address": {
+      "line1": "62nd Lane, Houston",
+      "line2": "Houston, USA"
+    },
+    "availability": "Available",
+    "profile_image": "https://res.cloudinary.com/ddz3q4jti/image/upload/v1735043929/doctor_profile_5_z0qc2n.png"
+  }
+]

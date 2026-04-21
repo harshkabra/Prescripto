@@ -1,0 +1,62 @@
+[
+  {
+    "fullName": "john doe",
+    "email": "john@gmail.com",
+    "password": "User@1234",
+    "phone": "9876543210",
+    "gender": "Male",
+    "date_of_birth": "1990-05-15",
+    "address": {
+      "line1": "123 Main St",
+      "line2": "New York, NY"
+    }
+  },
+  {
+    "fullName": "jane smith",
+    "email": "jane@gmail.com",
+    "password": "User@1234",
+    "phone": "8765432109",
+    "gender": "Female",
+    "date_of_birth": "1992-08-22",
+    "address": {
+      "line1": "456 Oak Ave",
+      "line2": "Los Angeles, CA"
+    }
+  },
+  {
+    "fullName": "robert wilson",
+    "email": "robert@gmail.com",
+    "password": "User@1234",
+    "phone": "7654321098",
+    "gender": "Male",
+    "date_of_birth": "1988-03-10",
+    "address": {
+      "line1": "789 Pine Rd",
+      "line2": "Chicago, IL"
+    }
+  },
+  {
+    "fullName": "michael brown",
+    "email": "michael@gmail.com",
+    "password": "User@1234",
+    "phone": "6543210987",
+    "gender": "Male",
+    "date_of_birth": "1995-12-05",
+    "address": {
+      "line1": "321 Elm St",
+      "line2": "Houston, TX"
+    }
+  },
+  {
+    "fullName": "sophia davis",
+    "email": "sophia@gmail.com",
+    "password": "User@1234",
+    "phone": "5432109876",
+    "gender": "Female",
+    "date_of_birth": "1993-07-18",
+    "address": {
+      "line1": "654 Maple Dr",
+      "line2": "Phoenix, AZ"
+    }
+  }
+]
