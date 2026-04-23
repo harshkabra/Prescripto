@@ -133,3 +133,5 @@ dist
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Node
 .codegpt
+# Ignore local installer (large file)
+mongodb-installer.msi
