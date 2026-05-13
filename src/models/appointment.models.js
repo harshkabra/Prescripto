@@ -45,7 +45,6 @@ const appointmentSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  payment: { type: Boolean, default: false },
   paymentId: { type: String }, // Store Razorpay payment ID
   refundInitiated: { type: Boolean, default: false },
   refundDetails: { type: Object, default: null },

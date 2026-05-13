@@ -72,7 +72,7 @@ const registerUser = asyncHandler(async function (req, res) {
   const accessToken = await generateToken(createdUser._id);
 
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   const user = await UserModel.findById(createdUser._id).select("-password");
@@ -125,7 +125,7 @@ const userLogin = asyncHandler(async function (req, res) {
   const accessToken = await generateToken(user._id);
 
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   const loggedUser = await UserModel.findById(user._id).select("-password");
@@ -133,7 +133,12 @@ const userLogin = asyncHandler(async function (req, res) {
   return res
     .status(200)
     .cookie("accessToken", accessToken, options)
-    .json(new ApiResponse(200, "User Logged In Successfully", loggedUser));
+    .json(
+      new ApiResponse(200, "User Logged In Successfully", {
+        loggedUser,
+        accessToken,
+      })
+    );
 });
 
 // user logout controller
@@ -154,7 +159,7 @@ const logoutUser = asyncHandler(async function (req, res) {
   ).select("-password");
 
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   return res
@@ -402,6 +407,7 @@ const updateUserDetails = asyncHandler(async (req, res) => {
 // get logged user details
 
 const getLoggedUserDetails = asyncHandler(async function (req, res) {
+  try {
   const userId = req.user._id;
 
   const user = await UserModel.findById(userId).select([
@@ -418,6 +424,9 @@ const getLoggedUserDetails = asyncHandler(async function (req, res) {
   return res
     .status(200)
     .json(new ApiResponse(200, "SuccessFully Fetched User Details", user));
+  } catch (error) {
+    return res.status(400).json(new ApiResponse(400, error.message));
+  }
 });
 
 // api to booked appointment by user

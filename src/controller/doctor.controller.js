@@ -155,8 +155,8 @@ const loginDoctor = asyncHandler(async (req, res) => {
   const accessToken = await generateToken(doctor._id);
 
   const options = {
-    // Prevent JavaScript access
-    secure: true, // Enable secure cookies in production
+    // Prevent JavaScript access; enable secure cookies in production only
+    secure: process.env.NODE_ENV === "production",
     maxAge: 24 * 60 * 60 * 1000,
   };
 
@@ -212,7 +212,7 @@ const forgotPassword = asyncHandler(async function (req, res) {
       text: message,
     });
 
-    const newDoctor = await DoctorModel.findOne(doctor._id).select("-password");
+    const newDoctor = await DoctorModel.findById(doctor._id).select("-password");
 
     return res
       .status(200)
@@ -301,7 +301,7 @@ const logoutDoctor = asyncHandler(async (req, res) => {
     }
   ).select("-password");
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   return res
@@ -385,7 +385,7 @@ const markAppointmentComplete = asyncHandler(async (req, res) => {
 
     return res
       .status(200)
-      .json(new ApiResponse(200, "Appointment Marked"), newAppointmentData);
+      .json(new ApiResponse(200, "Appointment Marked", newAppointmentData));
   } else {
     return res.status(400).json(new ApiResponse(400, "Failed to marked"));
   }

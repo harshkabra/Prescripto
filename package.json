@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "server": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "seed": "node src/seeds/seedData.js"
   },
   "keywords": ["prescripto", "mern", "doctor", "appointment"],
   "author": "",

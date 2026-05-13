@@ -63,7 +63,7 @@ const addDoctor = asyncHandler(async (req, res) => {
   if (!validator.isEmail(email)) {
     return res
       .status(400)
-      .ApiResponse(400, "Email is valid Please Provide valid Email");
+      .json(new ApiResponse(400, "Please Provide a valid Email"));
   }
 
   //   check existed user
@@ -175,7 +175,7 @@ const registerAdminAccount = asyncHandler(async (req, res, next) => {
   const accessToken = await generateToken(admin._id);
 
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   const createAdmin = await AdminModel.findById(admin._id).select("-password");
@@ -228,8 +228,8 @@ const loginAdmin = asyncHandler(async function (req, res) {
   const accessToken = await generateToken(admin._id);
 
   const options = {
-    // Prevent JavaScript access
-    secure: true, // Enable secure cookies in production
+    // Prevent JavaScript access; enable secure cookies in production only
+    secure: process.env.NODE_ENV === "production",
     maxAge: 24 * 60 * 60 * 1000,
   };
 
@@ -364,7 +364,7 @@ const logoutAdmin = asyncHandler(async function (req, res) {
     }
   ).select("-password");
   const options = {
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
   };
 
   return res
@@ -448,8 +448,7 @@ const getAllAppointmentForAdmin = asyncHandler(async (req, res) => {
       .json(
         new ApiResponse(
           500,
-          "Failed to  retrieve all appointment",
-          appointmentData
+          "Failed to retrieve all appointment"
         )
       );
   }

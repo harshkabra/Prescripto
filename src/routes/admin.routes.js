@@ -42,7 +42,7 @@ adminRouter.route("/admin-forgotPassword").post(forgotPassword);
 adminRouter.route("/resetPassword/:resetToken").post(resetPassword);
 
 // retrieve all doctor
-adminRouter.route("/all-doctors").post(adminAuthentication, getAllDoctor);
+adminRouter.route("/all-doctors").get(adminAuthentication, getAllDoctor);
 
 // change availability
 

@@ -14,9 +14,8 @@ if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
     razorpayInstance = null;
   }
 } else {
-  console.warn(
-    "⚠️  Razorpay keys not configured. Payment features disabled."
-  );
+  // Razorpay keys are optional. Payment endpoints will return 503 if called.
+  console.log("ℹ️  Razorpay keys not set — payment features are disabled.");
 }
 
 module.exports = razorpayInstance;
